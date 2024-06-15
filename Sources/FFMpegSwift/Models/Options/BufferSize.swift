@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum BufferSize: String, Option {
+public enum BufferSize: String, CommandLiner {
     case `default` = "2M"
     
     public var text: String {

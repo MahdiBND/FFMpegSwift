@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum VideoBitrate: String, Option {
+public enum VideoBitrate: String, CommandLiner {
     case `default` = "1M"
     
     public var text: String {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum Profile: String, Option {
+public enum Profile: String, CommandLiner {
     case high
     
     public var text: String {

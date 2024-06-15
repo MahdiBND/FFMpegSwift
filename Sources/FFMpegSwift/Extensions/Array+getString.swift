@@ -9,6 +9,6 @@ import Foundation
 
 extension Array where Element == Option {
     func getString() -> String {
-        self.map(\.text).joined(separator: " ")
+        self.map(\.option.text).joined(separator: " ")
     }
 }

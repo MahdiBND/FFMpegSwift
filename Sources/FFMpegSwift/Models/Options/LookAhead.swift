@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum LookAhead: Int, Option {
+public enum LookAhead: Int, CommandLiner {
     case `default` = 60
     
     public var text: String {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Thread: Option {
+public struct Thread: CommandLiner {
     let option: Int
     
     public init(_ option: Int) {

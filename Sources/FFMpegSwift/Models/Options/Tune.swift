@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum Tune: String, Option {
+public enum Tune: String, CommandLiner {
     case film
     
     public var text: String {

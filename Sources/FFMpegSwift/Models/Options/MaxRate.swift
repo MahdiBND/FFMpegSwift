@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum MaxRate: String, Option {
+public enum MaxRate: String, CommandLiner {
     case `default` = "1M"
     
     public var text: String {

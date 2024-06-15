@@ -8,7 +8,7 @@
 import Foundation
 
 /// Set adaptive quantization mode (`aq-mode`)
-public enum AdaptiveQuantization: Int, Option {
+public enum AdaptiveQuantization: Int, CommandLiner {
     /// Disabled = 0
     case `none` = 0
     /// Variance-based = 1

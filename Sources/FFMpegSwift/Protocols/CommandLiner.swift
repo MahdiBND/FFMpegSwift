@@ -7,6 +7,7 @@
 
 import Foundation
 
-public protocol Option {
+/// Has a text representation and can be used in terminal.
+public protocol CommandLiner {
     var text: String { get }
 }

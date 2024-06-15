@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum Base: String, Option {
+public enum Base: String, CommandLiner {
     case fastStart = "-movflags +faststart"
     case override = "-y"
     

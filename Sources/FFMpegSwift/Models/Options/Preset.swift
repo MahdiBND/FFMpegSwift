@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum Preset: String, Option {
+public enum Preset: String, CommandLiner {
     case slow, medium, fast, veryfast
     
     public var text: String {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum CodecOption: String, Option {
+public enum CodecOption: String, CommandLiner {
     case libx264
     case aac
     

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct QMax: Option {
+public struct QMax: CommandLiner {
     let option: Int
     
     public init(_ option: Int = 51) {

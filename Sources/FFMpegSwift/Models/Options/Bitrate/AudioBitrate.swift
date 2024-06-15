@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum AudioBitrate: String, Option {
+public enum AudioBitrate: String, CommandLiner {
     case low = "128k"
     case medium = "256k"
     case high = "320k"

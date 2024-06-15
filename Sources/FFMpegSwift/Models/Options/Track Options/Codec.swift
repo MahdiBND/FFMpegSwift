@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Codec: Option {
+public struct Codec: CommandLiner {
     let option: CodecOption
     
     public init(_ option: CodecOption) {

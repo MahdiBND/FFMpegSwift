@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Crf: Option {
+public struct Crf: CommandLiner {
     let option: Int
     
     public init(_ option: Int) {

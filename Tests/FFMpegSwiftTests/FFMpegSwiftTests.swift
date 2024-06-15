@@ -29,26 +29,15 @@ final class FFMpegSwiftTests: XCTestCase {
         return await service.execute(options: options)
     }
     
-    func testOptions() async {
+    func testNewSyntax() async {
         let options: [Option] = [
-            Base.override,
-            Codec(.libx264),
-            Codec(.aac),
-            Preset.slow,
-            Crf(25),
-            Bitrate(.default),
-            Frame.fillColor,
-            PixelFormat.yuv420p,
-            Profile.high,
-            Base.fastStart,
-            Tune.film,
-            BufferSize.default,
-            H264Option.noCut,
-            MaxRate.default,
-            AdaptiveQuantization.complexity,
-            QMin(),
-            QMax(),
-            LookAhead.default,
+            .override,
+            .crf(),
+            .aqmode(.complexity),
+            .fastStart,
+            .bufferSize(.default),
+            .threads(),
+            .qmin()
         ]
         
         let result = await execute(options: options)

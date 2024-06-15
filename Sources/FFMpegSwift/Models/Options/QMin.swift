@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct QMin: Option {
+public struct QMin: CommandLiner {
     let option: Int
     
     public init(_ option: Int = 16) {

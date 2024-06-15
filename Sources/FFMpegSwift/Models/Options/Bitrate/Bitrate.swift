@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Bitrate: Option {
+public struct Bitrate: CommandLiner {
     let config: BitrateConfig
     
     public init(_ config: BitrateConfig) {
@@ -38,5 +38,5 @@ public struct BitrateConfig {
         self.video = video
     }
     
-    static let `default` = BitrateConfig(audio: .low, video: .default)
+    public static let `default` = BitrateConfig(audio: .low, video: .default)
 }

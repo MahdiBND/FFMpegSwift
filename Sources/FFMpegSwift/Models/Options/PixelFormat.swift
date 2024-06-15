@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum PixelFormat: String, Option {
+public enum PixelFormat: String, CommandLiner {
     case yuv420p
     
     public var text: String {
