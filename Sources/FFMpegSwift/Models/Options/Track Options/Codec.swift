@@ -8,7 +8,7 @@
 import Foundation
 
 public struct Codec: Option {
-    var option: CodecOption
+    let option: CodecOption
     
     public init(_ option: CodecOption) {
         self.option = option

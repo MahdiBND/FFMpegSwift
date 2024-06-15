@@ -1,5 +1,5 @@
 //
-//  Codec.swift
+//  CodecOption.swift
 //
 //
 //  Created by Mahdi BND on 6/15/24.
@@ -11,7 +11,7 @@ public enum CodecOption: String, Option {
     case libx264
     case aac
     
-    var type: CodecType {
+    public var type: TrackType {
         switch self {
         case .libx264:
             return .video

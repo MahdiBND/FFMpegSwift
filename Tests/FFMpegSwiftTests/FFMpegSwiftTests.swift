@@ -17,7 +17,7 @@ final class FFMpegSwiftTests: XCTestCase {
         // https://developer.apple.com/documentation/xctest/defining_test_cases_and_test_methods
     }
     
-    func testExecute() async {
+    func execute(options: [Option]) async -> Bool {
         let input = URL(string: file)!
         let output = tmpDir.appendingPathComponent("test.mp4")
         
@@ -26,12 +26,32 @@ final class FFMpegSwiftTests: XCTestCase {
         service.inputURL = input
         service.outputURL = output
         
+        return await service.execute(options: options)
+    }
+    
+    func testOptions() async {
         let options: [Option] = [
+            Base.override,
             Codec(.libx264),
-            Codec(.aac)
+            Codec(.aac),
+            Preset.slow,
+            Crf(25),
+            Bitrate(.default),
+            Frame.fillColor,
+            PixelFormat.yuv420p,
+            Profile.high,
+            Base.fastStart,
+            Tune.film,
+            BufferSize.default,
+            H264Option.noCut,
+            MaxRate.default,
+            AdaptiveQuantization.complexity,
+            QMin(),
+            QMax(),
+            LookAhead.default,
         ]
         
-        let result = await service.execute(options: options)
+        let result = await execute(options: options)
         
         XCTAssertTrue(result)
     }

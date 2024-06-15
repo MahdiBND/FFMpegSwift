@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum CodecType: String {
+public enum TrackType: String {
     case audio = "-c:a "
     case video = "-c:v "
 }

@@ -16,7 +16,7 @@ public class FFmpeg {
         
         let optionsString = options.getString()
         
-        self.command = "-y -i \(inputURL) \(optionsString) \(outputURL)"
+        self.command = "-i \(inputURL) \(optionsString) \(outputURL)"
         
         return await self.run()
     }
