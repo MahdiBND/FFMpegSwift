@@ -8,11 +8,7 @@
 import Foundation
 
 public struct Codec: CommandLiner {
-    let option: CodecOption
-    
-    public init(_ option: CodecOption) {
-        self.option = option
-    }
+    var option: CodecOption
     
     public var text: String { option.text }
 }

@@ -23,6 +23,8 @@ public enum Option {
     case qmax(Int = 51)
     case threads(Int = 6)
     case tune(Tune)
+    case codec(CodecOption)
+    case bitrate(BitrateConfig)
     
     public var option: CommandLiner {
         return switch self {
@@ -58,6 +60,10 @@ public enum Option {
             Thread(count)
         case let .tune(option):
             value(for: option)
+        case let .codec(option):
+            value(for: option)
+        case let .bitrate(config):
+            value(for: Bitrate(config))
         }
     }
 }

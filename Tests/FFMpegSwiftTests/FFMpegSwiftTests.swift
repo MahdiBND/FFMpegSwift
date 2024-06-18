@@ -37,7 +37,9 @@ final class FFMpegSwiftTests: XCTestCase {
             .fastStart,
             .bufferSize(.default),
             .threads(),
-            .qmin()
+            .qmin(),
+            .codec(.aac),
+            .bitrate(.default)
         ]
         
         let result = await execute(options: options)
