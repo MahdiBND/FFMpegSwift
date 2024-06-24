@@ -25,6 +25,7 @@ public enum Option {
     case tune(Tune)
     case codec(CodecOption)
     case bitrate(BitrateConfig)
+    case pass(Int)
     
     public var option: CommandLiner {
         return switch self {
@@ -64,8 +65,31 @@ public enum Option {
             value(for: option)
         case let .bitrate(config):
             value(for: Bitrate(config))
+        case let .pass(number):
+            Pass(number)
         }
     }
+    
+    public static let webConfig: [Option] = [
+        .override,
+        .fastStart,
+        .codec(.libx264),
+        .codec(.aac),
+        .preset(.slow),
+        .crf(25),
+        .frame(.fillColor),
+        .bitrate(.default),
+        .pixelFormat(.yuv420p),
+        .profile(.high),
+        .tune(.film),
+        .h264Option(.noCut),
+        .maxRate(.default),
+        .bufferSize(.default),
+        .aqmode(.complexity),
+        .qmin(), .qmax(),
+        .lookAhead(.default),
+        .threads(6)
+    ]
 }
 
 private extension Option {
