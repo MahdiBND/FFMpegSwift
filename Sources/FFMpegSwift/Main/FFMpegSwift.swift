@@ -21,6 +21,12 @@ public class FFmpeg {
         return await self.run()
     }
     
+    public func execute(options: String) async -> Bool {
+        self.command = options
+        
+        return await self.run()
+    }
+    
     func run() async -> Bool {
         let session = await _execute()
         let returnCode = session?.getReturnCode()
